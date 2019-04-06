@@ -4,7 +4,7 @@
 ## Installation
 
 ```shell
-npm install --save-dev @pkmarko/f7
+npm install --save-dev @cuterajat26/marko-components
 ```
 
 ## Usage
