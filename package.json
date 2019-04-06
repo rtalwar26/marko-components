@@ -1,11 +1,19 @@
 {
-  "name": "@rtalwar/marko-components",
+  "name": "@cuterajat26/marko-components",
   "version": "1.0.0",
-  "description": "Custom Markojs components for i/o and UI",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtalwar26/marko-components.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtalwar26/marko-components/issues"
+  },
+  "homepage": "https://github.com/rtalwar26/marko-components#readme"
 }
