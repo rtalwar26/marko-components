@@ -1,0 +1,5 @@
+<div class="${input.class}">
+    $ const typeMap = {'String':'text','Int':'number'};
+    <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}" value="${input.field.defaultValue || ''}">
+    <span class="input-clear-button"></span>
+</div>

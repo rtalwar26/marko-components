@@ -1,0 +1,8 @@
+<div>
+    <if(state.status=="success" )>
+        <${input.then.renderBody} data=state.data />
+        </if>
+        <if(state.status=="error" )>
+            <${input.catch.renderBody} error=state.error />
+            </if>
+</div>

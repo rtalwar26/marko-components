@@ -1,0 +1,38 @@
+<li class="col-100 tablet-100 desktop-100 item-content item-input">
+  <div class="data-table data-table-init data-table-collapsible card">
+    <div class="card-content">
+      <form key="table-form">
+        <table>
+          <thead>
+            <tr>
+              <th class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <i class="icon-checkbox"></i>
+                </label>
+              </th>
+              <for(field in input.fields)>
+                <th class="label-cell">${field.name}</th>
+                </for>
+            </tr>
+          </thead>
+          <tbody>
+            <for|row,index| of=state.rows_data>
+
+              <item-row fields="${input.fields}" key="${index}" form_data="${row.form_data}" row-no="${index}" on-toggle_check('row_toggle_select') on-row_data_update('row_data_update')>
+              </item-row>
+              </for>
+
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+    <div class=" card-footer">
+      <div class="data-table-links">
+        <a class="link" on-click('add_row')>Add</a>
+        <a class="link" on-click('remove_row')>Remove</a>
+      </div>
+    </div>
+  </div>
+</li>

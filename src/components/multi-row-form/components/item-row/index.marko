@@ -1,0 +1,20 @@
+<tr>
+  <td class="checkbox-cell">
+    <label class="checkbox">
+      <input type="checkbox" on-change('toggle_check') checked=input.form_data.checked key="checkbox" data-row-no="${input.rowNo}" />
+      <i class="icon-checkbox"></i>
+    </label>
+  </td>
+  <for(field in input.fields)>
+    <td class="label-cell item-input">
+      <div class="item-inner">
+        <!-- <div class="item-title item-floating-label">Product</div> -->
+        <div class="item-input-wrap">
+          <input value="${input.form_data[field.name] || ''}" type="${field.type}" placeholder="${field.name}" name="${field.name}" on-change('input_change') required validate>
+          <span class="input-clear-button"></span>
+        </div>
+      </div>
+    </td>
+    </for>
+
+</tr>

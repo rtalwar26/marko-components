@@ -1,0 +1,12 @@
+<div id="${input.id}" class="card-content  card-content-padding">
+  <div class="block-title">${input.title || 'New Item'}</div>
+  <div class="list no-hairlines-md">
+    <form class="list no-hairlines-md" key="gql-create-form">
+
+      <graphql-field-list fields="${input.fields}"></graphql-field-list>
+    </form>
+    <div class="block block-strong row">
+      <div class="col"><a class="button" href="#" on-click('submit')>Submit</a></div>
+    </div>
+  </div>
+</div>
