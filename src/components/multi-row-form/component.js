@@ -13,7 +13,7 @@ module.exports = class {
     this.state.rows_data = input.row_data && Array.isArray(input.row_data) ? input.row_data.map(r => ({ form_data: r })) : [this.new_row()];
   }
   onUpdate() {
-    window.app && window.app.dataTable && window.app.dataTable.create({ el: this.getEl('data-table') })
+    // window.app && window.app.dataTable && window.app.dataTable.create({ el: this.getEl('data-table') })
   }
   onCreate(input) {
     this.state = {
