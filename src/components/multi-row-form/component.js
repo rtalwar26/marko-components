@@ -12,6 +12,9 @@ module.exports = class {
     input.fields = input.fields.split(',').map(field => ({ name: field.split(':')[0], type: field.split(':')[1] }));
     this.state.rows_data = input.row_data && Array.isArray(input.row_data) ? input.row_data.map(r => ({ form_data: r })) : [this.new_row()];
   }
+  onUpdate() {
+    window.app && window.app.dataTable && window.app.dataTable.create({ el: this.getEl('data-table') })
+  }
   onCreate(input) {
     this.state = {
       rows_data: []

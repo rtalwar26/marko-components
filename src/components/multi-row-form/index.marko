@@ -1,5 +1,5 @@
-<li class="col-100 tablet-100 desktop-100 item-content item-input">
-  <div class="data-table data-table-init data-table-collapsible card">
+<li class="col-100 tablet-100 desktop-100 item-content item-input item-input-with-error-message item-input-invalid">
+  <div class="data-table data-table-init data-table-collapsible card" key="data-table">
     <div class="card-content">
       <form key="table-form">
         <table>
@@ -19,7 +19,8 @@
           <tbody>
             <for|row,index| of=state.rows_data>
 
-              <item-row fields="${input.fields}" key="${index}" form_data="${row.form_data}" row-no="${index}" on-toggle_check('row_toggle_select') on-row_data_update('row_data_update')>
+              <item-row fields="${input.fields}" key="${index}" form_data="${row.form_data}" row-no="${index}"
+                on-toggle_check('row_toggle_select') on-row_data_update('row_data_update')>
               </item-row>
               </for>
 
