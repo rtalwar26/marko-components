@@ -30,6 +30,6 @@ module.exports = class {
                 'Content-Type': 'application/json'
 
             },
-        }).then(r => r.json()) : Promise.resolve([]);
+        }).then(r => r.json()) : Promise.reject(new Error('invalid url'));
     }
 }
