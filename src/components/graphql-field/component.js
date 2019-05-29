@@ -1,7 +1,11 @@
 module.exports = class {
 
     onInput(input, out) {
-        input.field = ({ ui: JSON.parse(input.field.description || ""), ...input.field });
+        try{
+            input.field = ({ ui: JSON.parse(input.field.description || ""), ...input.field });
+        }catch(e){
+            input.field = {ui:{},...input.field};
+        }
     }
     data() {
         let v = {};
