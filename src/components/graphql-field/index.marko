@@ -1,5 +1,16 @@
 <div class="${input.class}">
     $ const typeMap = {'String':'text','Int':'number'};
-    <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}" value="${input.field.defaultValue || ''}">
+    <if(input.field.ui.options)>
+    
+    <input list:scoped="${input.field.name}" key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}" value="${input.field.defaultValue || ''}">
+    <datalist id:scoped="${input.field.name}">        
+        <for|item| of=input.field.ui.options>
+          <option value="${item}">${item}</option>
+          </for>
+      </datalist>
+      </if>
+      <else>
+        <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}" value="${input.field.defaultValue || ''}">
+      </else>
     <span class="input-clear-button"></span>
 </div>
