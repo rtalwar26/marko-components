@@ -4,4 +4,7 @@ module.exports = class {
         let comps = this.getComponents('fields');
         return comps.map(c => c.data());
     }
+    changed() {
+        this.emit('change');
+    }
 }
