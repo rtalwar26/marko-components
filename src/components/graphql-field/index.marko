@@ -12,9 +12,9 @@
     </datalist>
     </if>
     <else>
-      <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}"
-        placeholder="${input.field.ui.placeholder || ''}" value="${input.field.defaultValue || ''}"
-        on-change('changed')>
+      <input value="${input.value || ''}" key="field" type="${typeMap[input.field.type.name] || 'text'}"
+        name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}"
+        value="${input.field.defaultValue || ''}" on-change('changed')>
     </else>
     <span class="input-clear-button"></span>
 </div>
