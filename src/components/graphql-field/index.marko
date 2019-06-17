@@ -4,7 +4,7 @@
 
     <input list:scoped="${input.field.name}" key="field" type="${typeMap[input.field.type.name] || 'text'}"
       name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}"
-      value="${input.field.defaultValue || ''}" on-change('changed')>
+      value="${input.value || input.field.defaultValue || ''}" on-change('changed')>
     <datalist id:scoped="${input.field.name}">
       <for|item| of=input.field.ui.options>
         <option value="${item}">${item}</option>
@@ -12,9 +12,9 @@
     </datalist>
     </if>
     <else>
-      <input value="${input.value || ''}" key="field" type="${typeMap[input.field.type.name] || 'text'}"
-        name="${input.field.name}" placeholder="${input.field.ui.placeholder || ''}"
-        value="${input.field.defaultValue || ''}" on-change('changed')>
+      <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}"
+        placeholder="${input.field.ui.placeholder || ''}" value="${input.value || input.field.defaultValue || ''}"
+        on-change('changed')>
     </else>
     <span class="input-clear-button"></span>
 </div>
