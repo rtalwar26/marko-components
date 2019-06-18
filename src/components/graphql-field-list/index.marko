@@ -4,7 +4,7 @@
 
             <div class="item-inner">
                 <div class="item-title item-floating-label">${field.name}</div>
-                <graphql-field disabled=(input.disabled.includes(field.name))
+                <graphql-field hidden=(input.hidden.includes(field.name)) disabled=(input.disabled.includes(field.name))
                     value="${input.prefill && input.prefill[field.name]}" key="fields[]"
                     class="item-input-wrap padding-top" field="${field}" on-change('changed')>
 
