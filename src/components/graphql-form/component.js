@@ -2,8 +2,8 @@ const { schema_query, mutation_query } = require("./gql_queries");
 module.exports = {
     onCreate(input, out) {
     },
-    fetch_schema(url) {
-        let comps = [this.input.type, this.input.subtype];
+    fetch_schema(url, type, subtype) {
+        let comps = [type, subtype];
         return comps.length < 2 ? Promise.resolve({}) : fetch(url, {
             method: 'POST',
             headers: {
@@ -19,7 +19,7 @@ module.exports = {
         this.input.url && this.input.type && this.input.subtype && this.renderForm();
     },
     renderForm() {
-        this.fetch_schema(this.input.url).then((r) => {
+        this.fetch_schema(this.input.url, this.input.type, this.input.subtype).then((r) => {
             r = r.map(f => (Object.assign({ ui: JSON.parse(f.description || "") }, f)));
             this.input.fields = r;
             this.forceUpdate();
