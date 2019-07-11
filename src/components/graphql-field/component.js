@@ -16,6 +16,6 @@ module.exports = class {
         return v;
     }
     changed() {
-        this.emit('change');
+        this.emit('change', this.data());
     }
 }
