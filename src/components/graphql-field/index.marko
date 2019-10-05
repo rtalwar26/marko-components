@@ -14,7 +14,7 @@
     <else>
       <input key="field" type="${typeMap[input.field.type.name] || 'text'}" name="${input.field.name}"
         placeholder="${input.field.ui.placeholder || ''}" value="${input.value || input.field.defaultValue || ''}"
-        on-change('changed')>
+        on-keyup('keyup') on-change('changed')>
     </else>
     <span class="input-clear-button"></span>
 </div>
