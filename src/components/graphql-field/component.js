@@ -18,4 +18,7 @@ module.exports = class {
     changed() {
         this.emit('change', this.data());
     }
+    keyup() {
+        this.emit('keyup', this.data());
+    }
 }
